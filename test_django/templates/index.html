@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<h2 align="center">แสดงข้อมูลบทความ</h2>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">ชื่อบทความ</th>
+      <th scope="col">บทความ</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for datas in data %}
+    <tr>
+      <th scope="row">{{datas.id}}</th>
+      <td>{{datas.name}}</td>
+      <td>{{datas.des}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
